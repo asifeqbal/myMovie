@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-toolbar color="" >
+      <ion-buttons slot="start" (click)="goBack()">
+          <ion-icon name="arrow-round-back"></ion-icon>
+      </ion-buttons>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <ion-title>Booking</ion-title> 
+  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+   <ion-card >
+    <div style="width: 30%;float: left;padding: 10px">
+      <img src="{{movie.image_url}}" width="70" height="120">
+    </div>
+    <div style="width: 70%;float: left;padding-left: 10px">
+       <h4 style="margin:0;color:black">{{movie.name}} </h4>
+       <p>{{movie.production_house}} | {{movie.type}} </p>
+       <p>21 Mar, 2019  | 2 hrs 30 mins </p>
+       
+          <ion-badge slot="start">23K vote</ion-badge>&nbsp;&nbsp;&nbsp;
+        
+       <ion-button fill="outline" size="small" color="default"  >UA</ion-button>  <ion-button fill="outline" size="small" color="default" >{{movie.language}}</ion-button>
+     </div>
+   
+   </ion-card> 
+   
+  
+  <ion-col>
+    <ion-item>
+      <ion-label color="primary" >City</ion-label>
+    <ion-select [(ngModel)]= "books.movie_city" value="location" okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="kolkata">Kolakat</ion-select-option>
+      <ion-select-option value="delhi">Delhi</ion-select-option>
+      <ion-select-option value="mumbai">Mumbai</ion-select-option>
+      <ion-select-option value="banglore">Banglore</ion-select-option>
+    </ion-select>
+    </ion-item>
+  </ion-col>
+
+
+
+  <ion-col>
+      <ion-item>
+          <ion-label color="primary" >Date</ion-label>
+          <ion-datetime [(ngModel)]="books.movie_date" displayFormat="DDDD MMM D, YYYY" min="2019" max="2019"  value="2019-04-04"></ion-datetime>
+        </ion-item>
+
+    <ion-item >
+      <ion-label color="primary">Time</ion-label>
+    <ion-select [(ngModel)]= "books.movie_time"  value="time" okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="9:30am">9:30 A.M</ion-select-option>
+      <ion-select-option value="10:20am">10:20 A.M</ion-select-option>
+      <ion-select-option value="12:30pm">12:30 P.M</ion-select-option>
+    </ion-select>
+    </ion-item>
+  </ion-col>
+
+  
+
+  <ion-col>
+    <ion-item >
+      <ion-label color="primary">Screen</ion-label>
+    <ion-select [(ngModel)]= "books.movie_screen" value="screen" okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="2d">2D</ion-select-option>
+      <ion-select-option value="3d">3D</ion-select-option>
+      <ion-select-option value="normal">Normal</ion-select-option>
+    </ion-select>
+    </ion-item>
+  </ion-col>  
+  
+
+  <ion-col>
+    <ion-item >
+      <ion-label color="primary"> No of ticket</ion-label>
+    <ion-select id="no_ticket" onchange="getPrice(this)" [(ngModel)]= "books.no_of_ticket" value="ticket" okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="one"> 1</ion-select-option>
+      <ion-select-option value="two"> 2</ion-select-option>
+      <ion-select-option value="three"> 3</ion-select-option>
+    </ion-select>
+    </ion-item>
+  </ion-col>  
+
+  <ion-col>
+    <ion-item >
+      <ion-label color="primary">Price</ion-label>
+    <ion-select [(ngModel)]= "books.total_amount" value="ticket" okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="100"> 100</ion-select-option>
+      <ion-select-option value="150"> 150</ion-select-option>
+      <ion-select-option value="200"> 200</ion-select-option>
+    </ion-select>
+    </ion-item>
+  </ion-col>  
+
+  
+
+<ion-button class="btn" shape="round" expand="full"  (click)="addBook()" > Book Ticket</ion-button>
+
+
+</ion-content>

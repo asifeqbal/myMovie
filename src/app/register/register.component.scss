@@ -1,0 +1,40 @@
+
+
+
+
+ion-content{
+    --background: #00bfa66b;
+    width: auto; 
+    margin-left:auto; 
+    margin-right: auto;
+}
+
+ion-img.user{
+   
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+     
+ }
+
+ion-toolbar{
+
+    --background: #00BFA5;
+    --color:#ffffff;
+    }
+
+ion-item{
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    --background: rgba(161, 144, 144, 0.404);
+    --color: #000000;
+}
+
+
+ion-button{
+--background: rgba(25, 204, 9, 0.932);
+}

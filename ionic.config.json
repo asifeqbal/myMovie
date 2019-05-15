@@ -1,0 +1,7 @@
+{
+  "name": "myMovie",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

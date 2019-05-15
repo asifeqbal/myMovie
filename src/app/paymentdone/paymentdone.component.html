@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" (click)="goBack()">
+            <ion-icon name="arrow-round-back"></ion-icon>
+        </ion-buttons>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <ion-title>
+        Payment success
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content padding>
+    <ion-item>
+    <ion-img  src="/assets/sign2.gif"></ion-img>
+    </ion-item>
+
+    <ion-item>
+      <ion-button shape="round" expand="full"  (click)="paymentSucess()"> Continue Booking</ion-button>
+   </ion-item>
+
+  
+  </ion-content>
+
+  <ion-footer>
+      <ion-img class="footer" src="/assets/footer.svg" ></ion-img>
+  </ion-footer>

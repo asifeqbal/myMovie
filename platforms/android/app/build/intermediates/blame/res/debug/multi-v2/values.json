@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\user\\Documents\\Asif\\workspace-techmahindra\\ionic\\myMovie\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\user\\Documents\\Asif\\workspace-techmahindra\\ionic\\myMovie\\platforms\\android\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "4,2,3",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "162,55,103",
+                        "endColumns": "63,47,58",
+                        "endOffsets": "221,98,157"
+                    },
+                    "to": {
+                        "startLines": "3,4,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "94,158,206",
+                        "endColumns": "63,47,58",
+                        "endOffsets": "153,201,260"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\checkout-1.5.2.aar\\80f9333c84c880c7d9a84e4c571d92f1\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "38",
+                        "endOffsets": "89"
+                    }
+                }
+            ]
+        }
+    ]
+}

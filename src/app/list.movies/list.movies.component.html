@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start" (click)="goBack()">
+          <ion-icon name="arrow-round-back"></ion-icon>
+      </ion-buttons>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+    <ion-text color="search" slot="end" size="large" (click)="logOut()">Logout</ion-text>   
+    <ion-title>
+        Movie List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-slides pager="true" autoplay="1000" loop="true" speed="500" pager="true" #mySlider [options]="options" (ionSlidesDidLoad)="slideChanged(mySlider)">
+
+        <ion-slide>
+         <ion-img src="/assets/kesari.jpg"></ion-img>
+         </ion-slide>  
+
+        <ion-slide>
+         <ion-img src="/assets/captain.jpg"></ion-img>
+         </ion-slide>
+    
+        <ion-slide>
+         <ion-img src="/assets/badla.jpg"></ion-img>
+         </ion-slide>
+
+          <ion-slide> 
+                <ion-img src="/assets/avg.jpg"></ion-img>
+           </ion-slide>
+
+      </ion-slides>
+ 
+    <!-- <ion-button shape="round" expand="full"  (click)="offerpage()">Offers</ion-button> -->
+<ion-img class="offer animated flash infinite"  shape="round"  expand="full" (click)="offerpage()" src="/assets/offer.png"></ion-img>
+
+<ion-grid>
+  <ion-row>
+      <ion-col align-self-center size-md="6" size-lg="4" size-xs="6" *ngFor="let m of movies">
+          
+              <ion-img  class="padding animated fadeln" src="{{m.image_url}}" shape="round" expand="full"></ion-img>                 
+          
+          
+            <ion-label text-wrap>
+                <ion-text color="primary">
+                  <h2>{{m.name}}</h2>
+                </ion-text>
+                <p>17 Mar,2019</p>
+                <ion-button shape="round" expand="full" (click)="booking(m.id)">Book</ion-button>                    
+            </ion-label>
+         
+      </ion-col> 
+  </ion-row>
+</ion-grid>
+<ion-img class="footer" src="/assets/footer.svg" ></ion-img>
+</ion-content>
